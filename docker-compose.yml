@@ -7,6 +7,21 @@ services:
       - compose-bridge
     ports:
       - 6379:6379
+    volumes:
+      - redis_data:/data
+  python_redis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker_python_redis
+    networks:
+      - compose-bridge
+    depends_on:
+      - redisdb
+
+
 networks:
   compose-bridge:
     driver: bridge
+volumes:
+  redis_data:
