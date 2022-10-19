@@ -1,0 +1,12 @@
+version: "1.0"
+services:
+  redisdb:
+    image: redis:7
+    container_name: redis-compose
+    networks:
+      - compose-bridge
+    ports:
+      - 6379:6379
+networks:
+  compose-bridge:
+    driver: bridge
