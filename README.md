@@ -17,4 +17,5 @@ Para build e rodar
 - depends on   -- cria dependencia entre os serviços
 - docker compose up -d -- 
 - docker compose ps -- mostrar os serviços
-- docker compose down  -- remover 
+- docker compose down  -- remover
+  
